@@ -3,6 +3,10 @@ The Ancestral Journey of Allegra McBirney and the Isaak Family
 
 ## Directory Structure
 ```
+photos/
+└── <year>-<photo-subject>.jpg
+```
+```
 story/
 ├── ch01-the-warsaw-colonists/
 │   ├── chapter.yml
