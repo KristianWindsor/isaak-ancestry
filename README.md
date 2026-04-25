@@ -12,6 +12,10 @@ photos/
 └── <year>-<photo-subject>.jpg
 ```
 ```
+people/
+└── <person-name>.yml
+```
+```
 story/
 ├── story.yml
 ├── ch01-the-warsaw-colonists/
