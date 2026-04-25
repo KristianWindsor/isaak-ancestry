@@ -1,6 +1,11 @@
 # Isaak Ancestry – Steppe by Steppe
 The Ancestral Journey of Allegra McBirney and the Isaak Family
 
+## Quickstart
+```sh
+php -S localhost:8000
+```
+
 ## Directory Structure
 ```
 photos/
@@ -8,6 +13,7 @@ photos/
 ```
 ```
 story/
+├── story.yml
 ├── ch01-the-warsaw-colonists/
 │   ├── chapter.yml
 │   └── s01-blacka-duchy-of-warsaw-june-1812/

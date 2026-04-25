@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F4EFE6;
+    color: #2B2320;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Site Title */
+header {
+    text-align: center;
+    padding: 12px 0 24px;
+    border-bottom: 1px solid #C8B89A;
+    margin-bottom: 32px;
+}
+
+.site-title {
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6B4F35;
+}
+.site-title:hover {
+    color: #3D2B1F;
+}
+
+
+/* Story Title */
+.story-title {
+    font-size: 2.2rem;
+    color: #3D2B1F;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+}
+
+/* Chapter Title */
+.chapter-title {
+    font-size: 1.6rem;
+    color: #5C3D24;
+    font-weight: normal;
+}
+
+.story-description,
+.chapter-description {
+    color: #7A6352;
+}
+
+
+/* Story Grid / Chapter Grid */
+.stories-grid,
+.chapters-grid {
+    display: grid;
+    gap: 12px;
+}
+.stories-grid {
+    margin: 48px 0;
+}
+
+.story-card,
+.chapter-card {
+    background: #FAFAF6;
+    padding: 18px 22px;
+    border-radius: 4px;
+    border: 1px solid #D8CEBC;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: background 0.15s, border-color 0.15s;
+}
+.story-card:hover,
+.chapter-card:hover {
+    background: #EDE5D0;
+    border-color: #A8885A;
+}
+
+.story-card h2,
+.chapter-card h3 {
+    color: #3D2B1F;
+    font-weight: normal;
+    margin: 0 0 6px;
+}
+.story-card p,
+.chapter-card p {
+    color: #7A6352;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* Chapter Content */
+.chapter-contents {
+    background: #FAFAF6;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid #D8CEBC;
+}
+
+.chapter-contents img,
+.chapter-contents video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+/* Navigation Buttons */
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.nav-btn {
+    background: #5C3D24;
+    color: #F4EFE6;
+    padding: 10px 22px;
+    border-radius: 3px;
+    font-family: Georgia, serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    transition: background 0.15s;
+}
+.nav-btn.prev {
+    margin-right: auto;
+}
+.nav-btn.next {
+    margin-left: auto;
+}
+.nav-btn:hover {
+    background: #3D2B1F;
+}
+
+
+/* Footer */
+footer {
+    min-height: 33vh;
+}
