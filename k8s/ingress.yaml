@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: isaak-ancestry
+  annotations:
+    certmanager.k8s.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: isaakstory.org
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: isaak-ancestry
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - isaakstory.org
+    secretName: isaakstory-cert

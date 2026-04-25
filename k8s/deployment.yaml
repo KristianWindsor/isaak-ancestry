@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: isaak-ancestry
+  labels:
+    app: isaak-ancestry
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: isaak-ancestry
+  template:
+    metadata:
+      labels:
+        app: isaak-ancestry
+    spec:
+      containers:
+        - name: isaak-ancestry
+          image: kristianwindsor/isaak-ancestry
+          ports:
+            - containerPort: 80

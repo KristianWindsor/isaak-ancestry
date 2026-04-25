@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: isaak-ancestry
+  labels:
+    app: isaak-ancestry
+spec:
+  selector:
+    app: isaak-ancestry
+  ports:
+    - port: 80

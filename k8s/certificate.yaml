@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: isaakstory-cert
+spec:
+  secretName: isaakstory-cert
+  commonName: isaakstory.org
+  dnsNames:
+  - isaakstory.org
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
