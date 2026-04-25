@@ -1,4 +1,4 @@
-name: Build
+name: Build and Deploy
 on:
   push:
     branches: [ main ]
@@ -25,3 +25,20 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: kristianwindsor/isaak-ancestry:b${{ github.run_number }},kristianwindsor/isaak-ancestry:latest
+  deploy:
+    name: Deploy
+    needs: [ build ]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to cluster
+        uses: steebchen/kubectl@v1.1.0
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          args: set image --record deployment/isaak-ancestry isaak-ancestry=kristianwindsor/isaak-ancestry:b${{ github.run_number }}
+      - name: Verify deployment
+        uses: steebchen/kubectl@v1.1.0
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          args: rollout status deployment/isaak-ancestry
